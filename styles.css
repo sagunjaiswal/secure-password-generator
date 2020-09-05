@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Devonshire&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(
+      135deg,
+      transparent 0%,
+      transparent 9%,
+      rgba(221, 113, 32, 0.6) 9%,
+      rgba(221, 113, 32, 0.6) 22%,
+      transparent 22%,
+      transparent 48%,
+      rgba(239, 148, 10, 0.6) 48%,
+      rgba(239, 148, 10, 0.6) 100%
+    ),
+    linear-gradient(
+      45deg,
+      transparent 0%,
+      transparent 29%,
+      rgb(221, 113, 32) 29%,
+      rgb(221, 113, 32) 48%,
+      rgb(202, 77, 53) 48%,
+      rgb(202, 77, 53) 84%,
+      transparent 84%,
+      transparent 100%
+    ),
+    linear-gradient(90deg, rgb(255, 255, 255), rgb(255, 255, 255));
+
+  color: #574b90;
+  display: flex;
+  font-family: "Devonshire", cursive;
+  font-size: 1.5rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 100vh;
+}
+
+#length {
+  width: 200px;
+  height: 40px;
+  border: 3px solid #555;
+}
+p {
+  margin: 5px 0;
+}
+
+h2 {
+  margin: 10px 0 20px;
+  text-align: center;
+}
+
+input[type="checkbox"] {
+  margin-right: 0;
+}
+
+.main-container {
+  background-color: transparent;
+  box-shadow: 0px 2px 10px;
+  padding: 30px;
+  width: 70%;
+  max-width: 100%;
+  max-height: 80%;
+}
+
+.result {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  width: 100%;
+  color: black;
+  font-stretch: extra-expanded;
+}
+
+.result #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.result .btn {
+  font-size: 20px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 40px;
+  width: 40px;
+}
+
+.btn {
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 12px;
+  background-color: #a75377;
+}
+
+.btn-large {
+  display: block;
+  width: 100%;
+}
+
+.option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+@media screen and (max-width: 400px) {
+  .result {
+    font-size: 14px;
+  }
+}
+
+/*here*/
+/* The toast - position it at the bottom and in the middle of the screen */
+#toast {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 150px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the toast */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the toast when clicking on a button (class added with JavaScript) */
+#toast.show {
+  visibility: visible; /* Show the toast */
+  /* Add animation: Take 0.5 seconds to fade in and out the toast.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the toast in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
