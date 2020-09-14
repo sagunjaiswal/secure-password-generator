@@ -1,5 +1,5 @@
-<a href="https://aimeos.org/">
-    <img src="https://github.com/sagunjaiswal/secure-password-generator/blob/master/icon.png" alt="Aimeos logo" title="Aimeos" align="right" height="60" />
+<a href="https://gracious-panini-83c4ba.netlify.app">
+    <img src="https://github.com/sagunjaiswal/secure-password-generator/blob/master/icon.png" alt="logo" title="logo" align="right" height="60" />
 </a>
 
 SECURE PASSWORD GENERATOR
